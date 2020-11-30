@@ -207,6 +207,11 @@ namespace ZombieWar
 
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Shootbullet(string direction)
         {
             Bullet shootBullet = new Bullet();

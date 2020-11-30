@@ -63,7 +63,7 @@
             // 
             // btnResume
             // 
-            this.btnResume.BackColor = System.Drawing.Color.Orange;
+            this.btnResume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(100)))), ((int)(((byte)(117)))));
             this.btnResume.FlatAppearance.BorderSize = 0;
             this.btnResume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,8 +80,9 @@
             // 
             // btnNouvPartie
             // 
-            this.btnNouvPartie.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnNouvPartie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(100)))), ((int)(((byte)(117)))));
             this.btnNouvPartie.FlatAppearance.BorderSize = 0;
+            this.btnNouvPartie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
             this.btnNouvPartie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNouvPartie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNouvPartie.ForeColor = System.Drawing.Color.White;
@@ -97,8 +98,9 @@
             // 
             // btnParametre
             // 
-            this.btnParametre.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnParametre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(100)))), ((int)(((byte)(117)))));
             this.btnParametre.FlatAppearance.BorderSize = 0;
+            this.btnParametre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Violet;
             this.btnParametre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnParametre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParametre.ForeColor = System.Drawing.Color.White;
@@ -114,8 +116,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Magenta;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(100)))), ((int)(((byte)(117)))));
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;

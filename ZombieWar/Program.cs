@@ -16,7 +16,7 @@ namespace ZombieWar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splashscreen1());
+            Application.Run(new Acceuil());
         }
     }
 }

@@ -33,8 +33,8 @@
             this.txtScore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.healthBar = new System.Windows.Forms.ProgressBar();
-            this.player = new System.Windows.Forms.PictureBox();
             this.Gametimer = new System.Windows.Forms.Timer(this.components);
+            this.player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,22 +84,22 @@
             this.healthBar.Value = 100;
             this.healthBar.Click += new System.EventHandler(this.healthBar_Click);
             // 
-            // player
-            // 
-            this.player.Image = global::ZombieWar.Properties.Resources.up;
-            this.player.Location = new System.Drawing.Point(68, 81);
-            this.player.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(71, 100);
-            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.player.TabIndex = 4;
-            this.player.TabStop = false;
-            // 
             // Gametimer
             // 
             this.Gametimer.Enabled = true;
             this.Gametimer.Interval = 20;
             this.Gametimer.Tick += new System.EventHandler(this.MainTimerEvents);
+            // 
+            // player
+            // 
+            this.player.Image = global::ZombieWar.Properties.Resources.up;
+            this.player.Location = new System.Drawing.Point(68, 81);
+            this.player.Margin = new System.Windows.Forms.Padding(2);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(71, 100);
+            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.player.TabIndex = 4;
+            this.player.TabStop = false;
             // 
             // Form1
             // 
@@ -115,6 +115,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Zombi War Game...";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();

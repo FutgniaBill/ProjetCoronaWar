@@ -20,10 +20,15 @@ namespace ZombieWar
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Hide();
-            Acceuil a = new Acceuil();
-            a.Show();
-            timer1.Enabled = false;
+            panel2.Width += 3;
+            if(panel2.Width >= 755)
+            {
+                timer1.Stop();
+                Acceuil a = new Acceuil();
+                a.Show();
+                this.Hide();
+                //timer1.Enabled = false;
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
