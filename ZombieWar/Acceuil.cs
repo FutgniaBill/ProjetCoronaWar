@@ -4,17 +4,38 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace ZombieWar
 {
     public partial class Acceuil : Form
     {
+        public WMPLib.WindowsMediaPlayer Player;
+
         public Acceuil()
         {
             InitializeComponent();
+            Player = new WMPLib.WindowsMediaPlayer();
+            Player.PlayStateChange += Player_PlayStateChange;
+            //do
+            //{
+                Player.URL = "F:/Videoder/Opening&Ending/Boku_No_Hero_Academia_Opening_2(128k).MP3";
+                Player.controls.play();
+            //} while ();
+
+        }
+        public void Player_PlayStateChange(int NewState)
+        {
+            if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsStopped)
+            {
+                //Actions on stop
+                FrmParametres f = new FrmParametres();
+                Player.settings.volume = f.gunaTrackBar1.Value;
+            }
         }
 
         private void btnNouvPartie_Click(object sender, EventArgs e)
@@ -33,17 +54,32 @@ namespace ZombieWar
 
         private void btnParametre_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FrmParametres n = new FrmParametres();
+            n.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FrmSession f = new FrmSession();
+            this.Hide();
+            f.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Player.controls.stop();
             Application.Exit();
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Acceuil_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

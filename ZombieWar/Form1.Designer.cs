@@ -77,7 +77,7 @@
             // healthBar
             // 
             this.healthBar.Location = new System.Drawing.Point(554, 15);
-            this.healthBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.healthBar.Margin = new System.Windows.Forms.Padding(2);
             this.healthBar.Name = "healthBar";
             this.healthBar.Size = new System.Drawing.Size(129, 19);
             this.healthBar.TabIndex = 3;
@@ -112,10 +112,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.txtAmmo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zombi War Game...";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();

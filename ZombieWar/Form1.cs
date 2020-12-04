@@ -209,7 +209,15 @@ namespace ZombieWar
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Acceuil a = new Acceuil();
+            this.Hide();
+            a.Show();
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void Shootbullet(string direction)

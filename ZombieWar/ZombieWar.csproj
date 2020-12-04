@@ -33,8 +33,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\M. NOUTAKDIE\Downloads\Telegram Desktop\BUNIFU\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\M. NOUTAKDIE\Downloads\Telegram Desktop\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +70,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceuil.cs">
@@ -59,11 +86,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmParametres2.cs">
+    <Compile Include="FrmCreerSession.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmParametres2.Designer.cs">
-      <DependentUpon>FrmParametres2.cs</DependentUpon>
+    <Compile Include="FrmCreerSession.Designer.cs">
+      <DependentUpon>FrmCreerSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifTouches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifTouches.Designer.cs">
+      <DependentUpon>FrmModifTouches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParametres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametres.Designer.cs">
+      <DependentUpon>FrmParametres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSession.Designer.cs">
+      <DependentUpon>FrmSession.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,14 +124,24 @@
     <Compile Include="Splashscreen2.Designer.cs">
       <DependentUpon>Splashscreen2.cs</DependentUpon>
     </Compile>
+    <Compile Include="TypingException.cs" />
     <EmbeddedResource Include="Acceuil.resx">
       <DependentUpon>Acceuil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmParametres2.resx">
-      <DependentUpon>FrmParametres2.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreerSession.resx">
+      <DependentUpon>FrmCreerSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifTouches.resx">
+      <DependentUpon>FrmModifTouches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametres.resx">
+      <DependentUpon>FrmParametres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSession.resx">
+      <DependentUpon>FrmSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +159,7 @@
     <EmbeddedResource Include="Splashscreen2.resx">
       <DependentUpon>Splashscreen2.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,6 +202,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CW.BLL\CW.BLL.csproj">
+      <Project>{B423DCC3-D9B5-497C-AE20-56DBED7089F8}</Project>
+      <Name>CW.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CW.BO\CW.BO.csproj">
+      <Project>{31A0FD4C-5F2D-4C52-948D-B3DAF0BD2113}</Project>
+      <Name>CW.BO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
