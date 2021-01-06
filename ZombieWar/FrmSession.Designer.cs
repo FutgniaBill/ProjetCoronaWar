@@ -248,8 +248,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Salmon;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CausesValidation = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pseudo2,
@@ -257,10 +264,13 @@
             this.Sexe1,
             this.Scrore});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(433, 238);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.Visible = false;
@@ -271,6 +281,7 @@
             this.Pseudo2.DataPropertyName = "Pseudo";
             this.Pseudo2.HeaderText = "Pseudo";
             this.Pseudo2.Name = "Pseudo2";
+            this.Pseudo2.ReadOnly = true;
             // 
             // Photo1
             // 
@@ -278,18 +289,21 @@
             this.Photo1.DataPropertyName = "Photo";
             this.Photo1.HeaderText = "Photo";
             this.Photo1.Name = "Photo1";
+            this.Photo1.ReadOnly = true;
             // 
             // Sexe1
             // 
             this.Sexe1.DataPropertyName = "Sexe";
             this.Sexe1.HeaderText = "Sexe";
             this.Sexe1.Name = "Sexe1";
+            this.Sexe1.ReadOnly = true;
             // 
             // Scrore
             // 
             this.Scrore.DataPropertyName = "Score";
             this.Scrore.HeaderText = "Score";
             this.Scrore.Name = "Scrore";
+            this.Scrore.ReadOnly = true;
             // 
             // FrmSession
             // 

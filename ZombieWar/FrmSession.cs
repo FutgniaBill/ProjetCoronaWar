@@ -26,6 +26,8 @@ namespace ZombieWar
            int nHeighEllipse
            );
 
+        public WMPLib.WindowsMediaPlayer Player;
+
         private SessionBLO sessionBLO;
         public FrmSession()
         {
@@ -33,6 +35,10 @@ namespace ZombieWar
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             sessionBLO = new SessionBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            //Player = new WMPLib.WindowsMediaPlayer();
+            ////Player.PlayStateChange += Player_PlayStateChange;
+            //Player.URL = "F:/Videoder/CW/2019-03-06_-_Crazy_Feelin_-_www.fesliyanstudios.com_-_David_Renda.MP3";
+            //Player.controls.play();
         }
         //private void loadData()
         //{
@@ -69,6 +75,7 @@ namespace ZombieWar
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //Player.controls.stop();
             Acceuil a = new Acceuil();
             a.Show();
             this.Hide();

@@ -30,41 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmParametres));
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.lblDiffi = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTouch = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblLang = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblVolume = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.gunaComboBoxDiffi = new Guna.UI.WinForms.GunaComboBox();
             this.gunaComboBoxLangue = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaButtonModify = new Guna.UI.WinForms.GunaButton();
             this.gunaTrackBar1 = new Guna.UI.WinForms.GunaTrackBar();
+            this.gunaButtonModify = new Guna.UI.WinForms.GunaButton();
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackColor = System.Drawing.Color.Black;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExit.Location = new System.Drawing.Point(366, 382);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(77, 64);
-            this.btnExit.TabIndex = 11;
-            this.btnExit.Text = "back";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -88,35 +68,13 @@
             this.label1.Size = new System.Drawing.Size(225, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Paramètres";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // bunifuCircleProgressbar1
-            // 
-            this.bunifuCircleProgressbar1.animated = false;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 300;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.Black;
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
-            this.bunifuCircleProgressbar1.LabelVisible = true;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(135, 129);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(207, 207);
-            this.bunifuCircleProgressbar1.TabIndex = 0;
-            this.bunifuCircleProgressbar1.TabStop = false;
-            this.bunifuCircleProgressbar1.Value = 0;
             // 
             // lblDiffi
             // 
@@ -226,6 +184,20 @@
             this.gunaComboBoxLangue.Visible = false;
             this.gunaComboBoxLangue.SelectedIndexChanged += new System.EventHandler(this.gunaComboBoxLangue_SelectedIndexChanged);
             // 
+            // gunaTrackBar1
+            // 
+            this.gunaTrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTrackBar1.Location = new System.Drawing.Point(164, 271);
+            this.gunaTrackBar1.Name = "gunaTrackBar1";
+            this.gunaTrackBar1.Size = new System.Drawing.Size(248, 23);
+            this.gunaTrackBar1.TabIndex = 19;
+            this.gunaTrackBar1.TrackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
+            this.gunaTrackBar1.TrackHoverColor = System.Drawing.Color.SeaShell;
+            this.gunaTrackBar1.TrackIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gunaTrackBar1.TrackPressedColor = System.Drawing.Color.Transparent;
+            this.gunaTrackBar1.Visible = false;
+            this.gunaTrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.gunaTrackBar1_Scroll);
+            // 
             // gunaButtonModify
             // 
             this.gunaButtonModify.AnimationHoverSpeed = 0.07F;
@@ -255,19 +227,48 @@
             this.gunaButtonModify.Visible = false;
             this.gunaButtonModify.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // gunaTrackBar1
+            // bunifuCircleProgressbar1
             // 
-            this.gunaTrackBar1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTrackBar1.Location = new System.Drawing.Point(164, 271);
-            this.gunaTrackBar1.Name = "gunaTrackBar1";
-            this.gunaTrackBar1.Size = new System.Drawing.Size(248, 23);
-            this.gunaTrackBar1.TabIndex = 19;
-            this.gunaTrackBar1.TrackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
-            this.gunaTrackBar1.TrackHoverColor = System.Drawing.Color.Gray;
-            this.gunaTrackBar1.TrackIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gunaTrackBar1.TrackPressedColor = System.Drawing.Color.Transparent;
-            this.gunaTrackBar1.Visible = false;
-            this.gunaTrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.gunaTrackBar1_Scroll);
+            this.bunifuCircleProgressbar1.animated = false;
+            this.bunifuCircleProgressbar1.animationIterval = 5;
+            this.bunifuCircleProgressbar1.animationSpeed = 300;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.Black;
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
+            this.bunifuCircleProgressbar1.LabelVisible = true;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(135, 129);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.bunifuCircleProgressbar1.MaxValue = 100;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(207, 207);
+            this.bunifuCircleProgressbar1.TabIndex = 0;
+            this.bunifuCircleProgressbar1.TabStop = false;
+            this.bunifuCircleProgressbar1.Value = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExit.Location = new System.Drawing.Point(366, 382);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(77, 64);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.Text = "back";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FrmParametres
             // 

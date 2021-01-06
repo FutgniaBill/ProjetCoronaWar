@@ -19,13 +19,13 @@ namespace ZombieWar
         public Acceuil()
         {
             InitializeComponent();
+            
             Player = new WMPLib.WindowsMediaPlayer();
+            Player.controls.stop();
             Player.PlayStateChange += Player_PlayStateChange;
-            //do
-            //{
-                Player.URL = "F:/Videoder/Opening&Ending/Boku_No_Hero_Academia_Opening_2(128k).MP3";
-                Player.controls.play();
-            //} while ();
+            Player.URL = "F:/Videoder/CW/2019-03-06_-_Crazy_Feelin_-_www.fesliyanstudios.com_-_David_Renda.MP3";
+            Player.settings.setMode("loop", true);
+            Player.controls.play();
 
         }
         public void Player_PlayStateChange(int NewState)
@@ -39,7 +39,8 @@ namespace ZombieWar
         }
 
         private void btnNouvPartie_Click(object sender, EventArgs e)
-        {
+        { 
+            //Player.controls.stop();
             this.Hide();
             Form1 f = new Form1();
             f.ShowDialog();
@@ -47,6 +48,7 @@ namespace ZombieWar
 
         private void btnResume_Click(object sender, EventArgs e)
         {
+            //Player.controls.stop();
             this.Hide();
             Form1 f = new Form1();
             f.ShowDialog();
@@ -54,6 +56,7 @@ namespace ZombieWar
 
         private void btnParametre_Click(object sender, EventArgs e)
         {
+            //Player.controls.stop();
             this.Hide();
             FrmParametres n = new FrmParametres();
             n.Show();
@@ -61,6 +64,7 @@ namespace ZombieWar
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Player.controls.stop();
             FrmSession f = new FrmSession();
             this.Hide();
             f.Show();

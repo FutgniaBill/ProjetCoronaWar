@@ -20,15 +20,18 @@ namespace ZombieWar
         int zombieSpeed = 3; 
         int score = 0;
         Random randNum = new Random();
-
         List<PictureBox> ZombiesList = new List<PictureBox>();
 
-
+        public WMPLib.WindowsMediaPlayer PlayerF;
 
         public Form1()
         {
             InitializeComponent();
-            RestartGame();
+           // PlayerF = new WMPLib.WindowsMediaPlayer();
+           //// Player.PlayStateChange += Player_PlayStateChange;
+           // PlayerF.URL = "F:/Videoder/CW/2019-03-06_-_Crazy_Feelin_-_www.fesliyanstudios.com_-_David_Renda.MP3";
+           // PlayerF.controls.play();
+           RestartGame();
         }
 
         private void MainTimerEvents(object sender, EventArgs e)
@@ -209,6 +212,7 @@ namespace ZombieWar
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //PlayerF.controls.stop();
             Acceuil a = new Acceuil();
             this.Hide();
             a.Show();
@@ -218,6 +222,11 @@ namespace ZombieWar
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //PlayerF.controls.stop();
         }
 
         private void Shootbullet(string direction)
