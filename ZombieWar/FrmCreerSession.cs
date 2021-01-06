@@ -123,6 +123,7 @@ namespace ZombieWar
             try
             {
                 checkForm();
+
                 string filename = null;
                 if (!string.IsNullOrEmpty(pictureBox1.ImageLocation))//hum
                 {
